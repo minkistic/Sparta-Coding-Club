@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <!-- Webpage Title -->
+  <title>수업-나홀로 메모장</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- JS -->   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
+  <!-- style -->
+  <style type="text/css">
+    *{
+      font-family: 'Stylish', sans-serif;
+    }
+    .wrap {
+      width: 900px;
+      margin: auto;
+    }
+    .comment {
+      color: blue;
+      font-weight: bold;
+    }
+    .form-post {
+      max-width: 500px;
+      padding: 2rem;
+      margin: 2rem auto;
+      border-color: #e9ecef;
+      border-radius: 0.3rem;
+      border: solid;
+      display: block;
+    }
+  </style>
+
+</head>
+<body>
+  <div class = "wrap">
+    <div class="jumbotron">
+      <h1 class="display-4">나홀로 메모장</h1>
+      <p class="lead">중요한 링크를 저장해두고, 나중에 볼 수 있는 공간입니다</p>
+      <hr class="my-4">
+      <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">포스팅박스 열기</a>
+      </p>
+    </div>
+
+    <div class="form-post" id="post-box">
+      <div>
+        <div class="form-group">
+          <label for='input1'>아티클 URL</label>
+          <input class="form-control" placeholder=''>
+        </div>
+
+        <div class="form-group">
+          <label for="textarea1">간단 코멘트</label>
+          <textarea class="form-control" rows="2"></textarea>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary">기사저장</button>
+    </div>
+
+    <div class="card-columns">
+      <div class="card">
+        <img class="card-img-top" src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg" alt="Card image cap">
+        <div class="card-body">
+          <a href="#" class="card-title">여기 기사 제목이 들어가죠</a>
+          <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+          <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top" src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg" alt="Card image cap">
+        <div class="card-body">
+          <a href="#" class="card-title">여기 기사 제목이 들어가죠</a>
+          <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+          <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top" src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg" alt="Card image cap">
+        <div class="card-body">
+          <a href="#" class="card-title">여기 기사 제목이 들어가죠</a>
+          <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+          <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg" alt="Card image cap">
+        <div class="card-body">
+          <a href="#" class="card-title">여기 기사 제목이 들어가죠</a>
+          <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+          <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg" alt="Card image cap">
+        <div class="card-body">
+          <a href="#" class="card-title">여기 기사 제목이 들어가죠</a>
+          <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+          <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg" alt="Card image cap">
+        <div class="card-body">
+          <a href="#" class="card-title">여기 기사 제목이 들어가죠</a>
+          <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+          <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--
+  <div class="jumbotron">
+    <div>
+      <img src="https://c.static-nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/a3pitn8kne6b1lddmoac/sb-blazer-low-gt-skate-shoe-yKeNdm.jpg">
+    </div>
+    <h1 class="display-4">양초를 팝니다.</h1> 
+    <p class="display-4">가격: 3,000원/개</p>
+    <p class="lead">이 양초는 사실 특별한 향을 가지고 있어요. 양초를 켜고 소원을 빌면 짜자잔 뭐든지 이뤄지게 된답니다. 하나 사가세요! 대나무 향이 아주 좋아요</p>
+    <p class="lead">
+      <div>
+        <label for="주문정보1">주문자 이름</label>
+        <input placeholder="">
+      </div>
+      <div>
+        <label for="주문정보2">수량</label>
+        <input placeholder="--수량을 선택하세요--">
+      </div>
+      <div>
+        <label for="주문정보3">주소</label>
+        <input placeholder="">
+      </div>
+      <div>
+        <label for="주문정보4">전화번호</label>
+        <input placeholder="">
+      </div>
+      <a class="btn btn-primary btn-lg" href="#" role="button">주문하기</a>
+    </p> 
+  -->
+
+</body>
+</html>      
+
