@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      #peng-image {
+        margin-top: 30px;
+      }
+      .container {
+        margin-bottom: 50px;
+      }
+    </style>
+
+    <title>복습합시다.</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        id="peng-image"
+        src="http://economychosun.com/query/upload/322/20191103221129_fgyjnwts.jpg"
+      />
+      <h1>펭수한테 사연을 보내세요</h1>
+      <div>
+        <div class="form-group">
+          <textarea class="form-control" id="pen-gretting" rows="3"></textarea>
+        </div>
+        <button type="button" class="btn btn-dark" onclick="buttonPressed()">
+          보내기
+        </button>
+        <button type="button" class="btn btn-normal" onclick="getOrderList()">
+          주문정보 읽기
+        </button>
+      </div>
+      <hr />
+      <ul id="order-list">
+        <li>주문정보</li>
+        <li>주문정보</li>
+        <li>주문정보</li>
+      </ul>
+    </div>
+
+    <script>
+      function getOrderList() {
+        $.ajax({
+          type: "GET",
+          url: "http://spartacodingclub.shop/order",
+          data: {},
+          success: function(response) {
+            let orders = response["orders"];
+            $("#order-list").html("");
+            for (let i = 0; i < orders.length; i++) {
+              let name = orders[i]["name"];
+              let phone = orders[i]["phone"];
+              $("#order-list").append("<li>" + name + " / " + phone + "</li>");
+            }
+          }
+        });
+      }
+
+      function buttonPressed() {
+        //textarea에 있는 값을 가져오기
+        let hi = $("#pen-gretting").val();
+        //만약에 hi가 아무내용도 없다면 에러를 띄우자
+        if (hi == "") {
+          alert("내용을 입력해 주세요");
+        } else {
+          //sayHello 에다가 보내기
+          sayHello("펭수에게\n" + hi + "\n곰튀김이..");
+          $("#pen-gretting").val("");
+        }
+      }
+
+      function sayHello(greeting) {
+        alert(greeting);
+      }
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

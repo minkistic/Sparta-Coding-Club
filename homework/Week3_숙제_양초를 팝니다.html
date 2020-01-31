@@ -105,24 +105,24 @@
       }
     }
 
-    function make_card(name, count, address, phone) {
-      let temp_html =
-      "<tr>\
-      <td>" +
-      name +
-      "</td>\
-      <td>" +
-      count +
-      "</td>\
-      <td>" +
-      address +
-      "</td>\
-      <td>" +
-      phone +
-      "</td>\
-      </tr>";
-      $("#orders-box").append(temp_html);
-    }
+    // function make_card(name, count, address, phone) {
+    //   let temp_html =
+    //   "<tr>\
+    //   <td>" +
+    //   name +
+    //   "</td>\
+    //   <td>" +
+    //   count +
+    //   "</td>\
+    //   <td>" +
+    //   address +
+    //   "</td>\
+    //   <td>" +
+    //   phone +
+    //   "</td>\
+    //   </tr>";
+    //   $("#orders-box").append(temp_html);
+    // }
 
     $(document).ready(function(){
       $('#cards-box').html('');
@@ -137,29 +137,36 @@ function orders_listing() {
     url: "http://spartacodingclub.shop/order",
     data: {},
     success: function(response){
-      console.log(response['orders'])
+      let orders = (response['orders'])
       for (let i = 0; i < orders.length; i++) {
-       make_card(articles[i]['name'],articles[i]['count'],articles[i]['address'],articles[i]['phone'])
+       make_card(orders[i]['name'],orders[i]['count'],orders[i]['address'],orders[i]['phone'])
      }
    }
  })
 }
 
-function make_card(comment, desc, image, title, url) {
-  let temp_html2 = '<div class="card">\
-  <div class="card-body">\
-  <a href="'+name+'" target="_blank" class="card-title">'+count+'</a>\
-  <p class="card-text">'+address+'</p>\
-  <p class="card-text comment">'+phone+'</p>\
-  </div>\
-  </div>';
-  $('#orders-box').append(temp_html2);
+function make_card(name, count, address, phone) {
+  let temp_html2 =
+  "<tr>\
+  <td>" +
+  name +
+  "</td>\
+  <td>" +
+  count +
+  "</td>\
+  <td>" +
+  address +
+  "</td>\
+  <td>" +
+  phone +
+  "</td>\
+  </tr>";
+  $("#orders-box").append(temp_html2);
 }
 
-
 $(document).ready(function(){
-  $('orders_listing').html('');
-  order_listing();
+  $('orders-box').html('');
+  orders_listing();
 });
 
 
@@ -259,7 +266,7 @@ $(document).ready(function(){
         />
       </div>
       <div class="order">
-        <button onclick="test()" type="button" class="btn btn-primary">
+        <button onclick="order()" type="button" class="btn btn-primary">
           주문하기
         </button>
       </div>
