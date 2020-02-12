@@ -6,7 +6,6 @@ import flask
 #다른파일에서 임포트
 import naver_music_crawler
 
-
 app = flask.Flask('네이버뮤직 순위 서버')
 
 @app.route('/')
